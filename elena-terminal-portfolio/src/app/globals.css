@@ -73,6 +73,6 @@ a:active {
   }
 
   .terminal-input input{
-    @apply flex w-full bg-transparent outline-none text-white ml-4
+    @apply flex w-full bg-transparent outline-none text-white ml-2
   }
 }
