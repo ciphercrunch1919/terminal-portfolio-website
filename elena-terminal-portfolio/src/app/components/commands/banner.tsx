@@ -28,7 +28,7 @@ const Banner: React.FC = () => {
             </div>
             <p><br />Welcome to my website terminal portfolio!</p>
             <p>Type <span className={'shadowText'}>'help'</span> for a list of available commands.</p>
-            <p>Type <span className={'shadowText'}>'clear'</span> to clear the terminal page.</p>
+            <p>Type <span className={'shadowText'}>'clear'</span> or <span className={'shadowText'}>ctrl + l</span> to clear the terminal page.</p>
           </div>
         </div>
       </>

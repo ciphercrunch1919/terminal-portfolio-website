@@ -4,7 +4,7 @@ const Resume: React.FC = () => {
     return (
       <>
         <p style={{color:'#0077aa'}}>NAME</p>
-        <p>&emsp;;Elena Coleman - Software Engineer<br /><br /></p>
+        <p>&emsp;Elena Coleman - Software Engineer<br /><br /></p>
         <p style={{color:'#0077aa'}}>SYNOPSIS</p>
         <p>&emsp;elena_coleman [OPTIONS]<br /><br /></p>
         <p style={{color:'#0077aa'}}>DESCRIPTION</p>
@@ -42,7 +42,7 @@ const Resume: React.FC = () => {
         <p>&emsp;RPS Game - Java</p>
         <p>&emsp;&emsp;A variation of the Rock Paper Scissors game implemented in Java.<br /><br /></p>
         <p>&emsp;SuguruSolverAI - Python</p>
-        <p>&emsp;&emsp;;A Python project utilizing AI heuristics to solve Suguru puzzles.<br /><br /></p>
+        <p>&emsp;&emsp;A Python project utilizing AI heuristics to solve Suguru puzzles.<br /><br /></p>
         <p style={{color:'#0077aa'}}>CORE COMPETENCIES</p>
         <p>&emsp;- Front End: HTML, JavaScript, CSS, React</p>
         <p>&emsp;- Programming: Python, Java, C++, C</p>

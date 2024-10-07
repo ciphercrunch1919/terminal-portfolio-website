@@ -11,26 +11,13 @@ import Social from './commands/social'; // Social links command
 import Projects from './commands/projects'; // Projects command
 
 export const Terminal = () => {
-  // State to manage the terminal's prompt line, simulating a typing effect
-  const visitor = useTypingEffect("visitor@ciphercrunch:~$", 20);
-  
-  // State for the current input value typed by the user
-  const [inputValue, setInputValue] = useState<string>('');
-
-  // Command history state that stores previously entered commands
-  const [commandHistory, setCommandHistory] = useState<string[]>([]);
-
-  // Boolean state for clearing the terminal
-  const [clear, setClear] = useState(true);
-
-  // State to keep track of the user's navigation in the command history
-  const [commandIndex, setCommandIndex] = useState(-1);
-
-  // Reference to the input field for focus control
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  // Array of available commands for auto-complete
-  const availableCommands = ['help', 'about', 'education', 'resume', 'projects', 'social', 'banner', 'clear'];
+  const visitor = useTypingEffect("visitor@ciphercrunch:~$", 20); //Terminal's prompt line, simulating a typing effect
+  const [inputValue, setInputValue] = useState<string>(''); //State for the current input value typed by the user
+  const [commandHistory, setCommandHistory] = useState<string[]>([]); //Command history state that stores previously entered commands
+  const [clear, setClear] = useState(true); //Boolean state for clearing the terminal
+  const [commandIndex, setCommandIndex] = useState(-1); //State to keep track of the user's navigation in the command history
+  const inputRef = useRef<HTMLInputElement>(null); //Reference to the input field for focus control
+  const availableCommands = ['help', 'about', 'education', 'resume', 'projects', 'social', 'banner', 'clear']; // Array of available commands for auto-complete
 
   // Focuses the input field when the component mounts
   useEffect(() => {
@@ -207,7 +194,7 @@ export const Terminal = () => {
         )).reverse()}
         
         <div className='flex snap-end terminal-prompted'>
-          <div className='flex'><label>{visitor}</label></div> {/* Terminal prompt */}
+          <div className='flex'>{visitor}</div> {/* Terminal prompt */}
           <div className='terminal-input'>
             <form onSubmit={handleSubmit} data-testid="terminalForm">
               <input
