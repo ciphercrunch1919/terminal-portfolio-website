@@ -1,95 +1,87 @@
 "use client"
 
 import React, { Suspense, useCallback, useEffect, useRef, useState } from 'react';
-import { useTypingEffect } from '../hooks/typing-effect';
-import Banner from './commands/banner';
-import About from './commands/about';
-import Education from './commands/education';
-import Resume from './commands/resume';
-import Help from './commands/help';
-import Social from './commands/social';
-import Projects from './commands/projects';
+import { useTypingEffect } from '../hooks/typing-effect'; // Custom hook for typing effect
+import Banner from './commands/banner'; // Terminal banner (welcome message)
+import About from './commands/about'; // About command
+import Education from './commands/education'; // Education command
+import Resume from './commands/resume'; // Resume command
+import Help from './commands/help'; // Help command
+import Social from './commands/social'; // Social links command
+import Projects from './commands/projects'; // Projects command
 
 export const Terminal = () => {
+  // State to manage the terminal's prompt line, simulating a typing effect
   const visitor = useTypingEffect("visitor@ciphercrunch:~$", 20);
   
+  // State for the current input value typed by the user
   const [inputValue, setInputValue] = useState<string>('');
+
+  // Command history state that stores previously entered commands
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
+
+  // Boolean state for clearing the terminal
   const [clear, setClear] = useState(true);
-  const [commandIndex, setCommandIndex] = useState(-1); // Used for navigating history
+
+  // State to keep track of the user's navigation in the command history
+  const [commandIndex, setCommandIndex] = useState(-1);
+
+  // Reference to the input field for focus control
   const inputRef = useRef<HTMLInputElement>(null);
-  
-  // List of available commands for auto-complete
+
+  // Array of available commands for auto-complete
   const availableCommands = ['help', 'about', 'education', 'resume', 'projects', 'social', 'banner', 'clear'];
 
+  // Focuses the input field when the component mounts
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
-  
-  const welcome = (clear: boolean) => {
-    if (clear === true) {
-      return <Banner />;
-    }
-    return;
-  };
 
-  const handleSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (inputValue.trim()) {
-      processInput(inputValue);
-      setCommandHistory([inputValue, ...commandHistory]);
-      setInputValue('');
-      setCommandIndex(-1); // Reset index after submitting
-    }
-  }, [inputValue, commandHistory]);
-
-  const clearHistory = () => {
-    setCommandHistory([]);
-  };
-
-  const handleInputChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-  }, []);
-
+  // Function to process input and split it into command and arguments
   const processInput = (command: string): string[] => {
     let input = command.split(" ");
-
+    
+    // If the input has more than two elements, join everything after the command into arguments
     if (input.length > 2) {
-      const cmd = input.splice(0, 1);
-      const args = input.join(" ");
-      return (input = [...cmd, args]);
+      const cmd = input.splice(0, 1); // Extract the command
+      const args = input.join(" "); // Join the rest as arguments
+      return [...cmd, args]; // Return both command and arguments
     }
-
+    
+    // Return the command and arguments separately
     return [...input];
   };
 
+  // Function that handles terminal commands and returns their output
   const terminalOutput = (command: string) => {
-    const [cmd, ...args] = processInput(command);
-    
+    const [cmd, ...args] = processInput(command); // Process the input to extract command and arguments
+
+    // Switch block to handle different commands
     switch (cmd.toLowerCase()) {
       case "help":
-        return <Help />;
+        return <Help />; // Display help message
       case "about":
-        return <About />;
+        return <About />; // Display about section
       case "education":
-        return <Education />;
+        return <Education />; // Display education section
       case "resume":
-        return <Resume />;
+        return <Resume />; // Display resume
       case "projects":
-        return <Projects />;
+        return <Projects />; // Display projects
       case "social":
-        return <Social />;
+        return <Social />; // Display social links
       case "banner":
-        return <Banner />;
-      case 'echo':
-        return <p>{args.join(" ")}</p>;
+        return <Banner />; // Display banner (welcome message)
+      case "echo":
+        return <p>{args.join(" ")}</p>; // Echo the arguments back to the user
       case "clear":
-        clearHistory();
+        clearHistory(); // Clear the command history
         if (clear === true) {
-          setClear(clear => !clear);
+          setClear(clear => !clear); // Toggle clear state
         }
         break;
       default:
+        // Default case for unrecognized commands
         return (
           <>
             <p>
@@ -101,7 +93,30 @@ export const Terminal = () => {
     }
   };
 
-  // Handle key events for navigation and autocomplete
+  // Clears the command history
+  const clearHistory = () => {
+    setCommandHistory([]);
+  };
+
+  // Function to handle the form submission (when the user presses Enter)
+  const handleSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Prevent page reload on form submission
+
+    // If there's input, process the command
+    if (inputValue.trim()) {
+      processInput(inputValue); // Process the command
+      setCommandHistory([inputValue, ...commandHistory]); // Add the command to history
+      setInputValue(''); // Clear the input
+      setCommandIndex(-1); // Reset the command history index
+    }
+  }, [inputValue, commandHistory]);
+
+  // Handles changes to the input field
+  const handleInputChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value); // Update the input value
+  }, []);
+
+  // Handles key events like up/down arrow for history and Tab for auto-complete
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     // Handle Arrow Up (Navigate up in history)
     if (event.key === 'ArrowUp') {
@@ -126,32 +141,33 @@ export const Terminal = () => {
     // Handle Tab (Auto-complete logic)
     if (event.key === 'Tab') {
       event.preventDefault();
-      handleTabAutoComplete(); // Trigger auto-complete logic
+      handleTabAutoComplete(); // Trigger auto-complete
     }
 
     // Handle Ctrl + L (Clear terminal output)
     if (event.ctrlKey && event.key === 'l') {
       event.preventDefault();
-      clearHistory(); // Clear the terminal
+      clearHistory(); // Clear terminal
       if (clear === true) {
-        setClear(clear => !clear);
+        setClear(clear => !clear); // Toggle clear state
       }
     }
   };
 
+  // Handles auto-complete functionality
   const handleTabAutoComplete = () => {
     if (inputValue.length === 0) return; // No input, do nothing
 
-    // Filter available commands based on current input
+    // Find commands that start with the current input
     const matches = availableCommands.filter((cmd) =>
       cmd.startsWith(inputValue)
     );
 
-    // If there's only one match, auto-complete it
+    // If there's only one match, auto-complete the input
     if (matches.length === 1) {
       setInputValue(matches[0]);
     } else if (matches.length > 1) {
-      // If multiple matches, output the list of possibilities
+      // If multiple matches, show available options
       setCommandHistory((prevHistory) => [
         `$ ${inputValue}`,
         ...prevHistory,
@@ -163,17 +179,27 @@ export const Terminal = () => {
     }
   };
 
+  // Handles clicking on the terminal to refocus the input
   const clickHandler = () => {
-    inputRef.current?.focus();
+    inputRef.current?.focus(); // Refocus the input field
+  };
+
+  // Function to display the welcome message/banner when the terminal is cleared
+  const welcome = (clear: boolean) => {
+    if (clear === true) {
+      return <Banner />;
+    }
+    return;
   };
 
   return (
-    <div onClick={clickHandler}>
+    <div onClick={clickHandler}> {/* When terminal is clicked, refocus on input */}
       <div>
-        {welcome(clear)}
+        {welcome(clear)} {/* Display banner if terminal is cleared */}
         {commandHistory.map((item, index) => (
           <div key={index}>
             <Suspense fallback={<></>}>
+              {/* Display the command and the output */}
               <p>visitor@ciphercrunch:~$ {item}</p>
               <p>{terminalOutput(item)}</p>
             </Suspense>
@@ -181,18 +207,18 @@ export const Terminal = () => {
         )).reverse()}
         
         <div className='flex snap-end terminal-prompted'>
-          <div className='flex'><label>{visitor}</label></div>
+          <div className='flex'><label>{visitor}</label></div> {/* Terminal prompt */}
           <div className='terminal-input'>
             <form onSubmit={handleSubmit} data-testid="terminalForm">
               <input
                 data-testid="terminalInput"
                 spellCheck="false"
-                ref={inputRef}
+                ref={inputRef} // Attach input reference for focus control
                 type="text"
                 autoFocus
-                value={inputValue}
-                onChange={handleInputChange}
-                onKeyDown={handleKeyDown} // Capture key actions here
+                value={inputValue} // Bind input value to state
+                onChange={handleInputChange} // Update state when input changes
+                onKeyDown={handleKeyDown} // Capture key events (for history, autocomplete, etc.)
               />
             </form>
           </div>
