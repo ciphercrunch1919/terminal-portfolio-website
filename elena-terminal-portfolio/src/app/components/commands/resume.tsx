@@ -16,8 +16,8 @@ const Resume: React.FC = () => {
       <p>&emsp;&emsp;Location: Englewood, CO<br /><br /></p>
       <p>&emsp;&emsp;Software Engineer II (2021-Present)</p>
       <p>&emsp;&emsp;&emsp;Actively participates in team meetings, brainstorming sessions, and code reviews, fostering a collaborative and innovative environment.</p>
-      <p>&emsp;&emsp;&emsp;Designs and implements transactional email solutions for Boost Mobile, Boost Infinite, and Genesis product lines.</p>
-      <p>&emsp;&emsp;&emsp;Utilizes Responsys and Knak to architect, craft, and disseminate marketing and transactional emails.<br /><br /></p>
+      <p>&emsp;&emsp;&emsp;Designs and implements transactional email solutions, IAM (In-App Messages) and IAB (In-App Banners) for Dish, Sling, Boost Mobile, Boost Infinite, and Genesis product lines.</p>
+      <p>&emsp;&emsp;&emsp;Utilizes Responsys, Moengage, and Knak to architect, craft, and disseminate marketing and transactional emails.<br /><br /></p>
       <p>&emsp;&emsp;Entry Java Developer (Contract)</p>
       <p>&emsp;&emsp;&emsp;Specialized in creating automated email solutions using Java for the Email Design team.</p>
       <p>&emsp;&emsp;&emsp;Engaged in code reviews and quality assurance processes, ensuring reliability and performance of Java-based email solutions.<br /><br /></p>
