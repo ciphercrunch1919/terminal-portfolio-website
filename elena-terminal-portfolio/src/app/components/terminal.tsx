@@ -17,7 +17,8 @@ export const Terminal = () => {
   const [clear, setClear] = useState(true); //Boolean state for clearing the terminal
   const [commandIndex, setCommandIndex] = useState(-1); //State to keep track of the user's navigation in the command history
   const inputRef = useRef<HTMLInputElement>(null); //Reference to the input field for focus control
-  const availableCommands = ['help', 'about', 'education', 'resume', 'projects', 'social', 'banner', 'clear']; // Array of available commands for auto-complete
+  const availableCommands = ['help', 'about', 'education', 'resume', 'projects', 'social', 'banner', 'clear']; //Array of available commands for auto-complete
+  const [command, setCommand] = useState<string>(''); // Track the current command
 
   // Focuses the input field when the component mounts
   useEffect(() => {
@@ -100,6 +101,7 @@ export const Terminal = () => {
 
   // Handles changes to the input field
   const handleInputChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    setCommand(event.target.value);
     setInputValue(event.target.value); // Update the input value
   }, []);
 
