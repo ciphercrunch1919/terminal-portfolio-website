@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const Resume: React.FC = () => {
-  const file = "/ELENACOLEMAN_RESUME_2024.pdf" //Resume pdf file
+  const file = "/ELENA_COLEMAN_Resume2025.pdf" //Resume pdf file
 
   return (
     <>
@@ -46,10 +46,14 @@ const Resume: React.FC = () => {
       <p>&emsp;SuguruSolverAI - Python</p>
       <p>&emsp;&emsp;A Python project utilizing AI heuristics to solve Suguru puzzles.<br /><br /></p>
       <p style={{color:'#0077aa'}}>CORE COMPETENCIES</p>
-      <p>&emsp;- Front End: HTML, JavaScript, CSS, React</p>
-      <p>&emsp;- Programming: Python, Java, C++, C</p>
+      <p>&emsp;- Front End: HTML, JavaScript, CSS, React, NEXT.js</p>
+      <p>&emsp;- Programming: Python, Java, C++, C, RUST</p>
       <p>&emsp;- Database: PostgreSQL, MySQL, AWS</p>
       <p>&emsp;- Frameworks: Spring Boot</p>
+      <p>&emsp;- Tools: Git, JIRA, Confluence, Jenkins, Docker, Kubernetes</p>
+      <p>&emsp;- Test Tools: TestRail, SoapUI, Postman, LambdaTest</p>
+      <p>&emsp;- Methodologies: Agile, Scrum, Waterfall<br /><br /></p>
+
 
       <p><a href={file} target="_blank" rel="nonopener noreferrer">CLICK HERE TO DOWNLOAD LATEST RESUME</a></p>
     </>
