@@ -1,23 +1,29 @@
 import { useEffect, useState } from 'react';
 
 const Resume: React.FC = () => {
-  const file = "/ELENA_COLEMAN_Resume2025.pdf" //Resume pdf file
+  const file = "/ELENA_COLEMAN_Resume2025-1.pdf" //Resume pdf file
 
   return (
     <>
       <p style={{color:'#0077aa'}}>NAME</p>
-      <p>&emsp;Elena Coleman - Software Engineer<br /><br /></p>
+      <p>&emsp;Elena Coleman - Software Developer<br /><br /></p>
       <p style={{color:'#0077aa'}}>SYNOPSIS</p>
       <p>&emsp;elena_coleman [OPTIONS]<br /><br /></p>
       <p style={{color:'#0077aa'}}>DESCRIPTION</p>
       <p>&emsp;Elena Coleman is a skilled Software Engineer with expertise in software development, data analysis, and communication solutions. She has a strong background in crafting seamless communication solutions and is adept at collaborating with teams to drive innovation and efficiency.<br /><br /></p>
       <p style={{color:'#0077aa'}}>PROFESSIONAL EXPERIENCE</p>
+      <p>&emsp;MADISON MUTUAL INSURANCE COMPANY</p>
+      <p>&emsp;&emsp;Location: Edwardsville, IL<br /><br /></p>
+      <p>&emsp;&emsp;IT Developer (2025 - Present)</p>
+      <p>&emsp;&emsp;&emsp;Designed, developed, and maintained new features, bug fixes, and enhancements within the Guidewire InsuranceNow platform, improving stability and functionality for insurance workflows.</p>
+      <p>&emsp;&emsp;&emsp;Deployed application changes to QA environments, ensuring smooth integration and readiness for testing cycles.</p>
+      <p>&emsp;&emsp;&emsp;Created code analysis reports to identify performance bottlenecks, optimize existing modules, and ensure compliance with system standards.<br /><br /></p>
       <p>&emsp;DISH NETWORK</p>
       <p>&emsp;&emsp;Location: Englewood, CO<br /><br /></p>
-      <p>&emsp;&emsp;Software Engineer II (2021-Present)</p>
-      <p>&emsp;&emsp;&emsp;Actively participates in team meetings, brainstorming sessions, and code reviews, fostering a collaborative and innovative environment.</p>
-      <p>&emsp;&emsp;&emsp;Designs and implements transactional email solutions, IAM (In-App Messages) and IAB (In-App Banners) for Dish, Sling, Boost Mobile, Boost Infinite, and Genesis product lines.</p>
-      <p>&emsp;&emsp;&emsp;Utilizes Responsys, Moengage, and Knak to architect, craft, and disseminate marketing and transactional emails.<br /><br /></p>
+      <p>&emsp;&emsp;Software Engineer II (2021-2025)</p>
+      <p>&emsp;&emsp;&emsp;Participated in team meetings, brainstorming sessions, and code reviews, fostering a collaborative and innovative environment.</p>
+      <p>&emsp;&emsp;&emsp;Designed and implements transactional email solutions, IAM (In-App Messages) and IAB (In-App Banners) for Dish, Sling, Boost Mobile, Boost Infinite, and &emsp;&emsp;&emsp;Genesis product lines.</p>
+      <p>&emsp;&emsp;&emsp;Utilized Responsys, Moengage, and Knak to architect, craft, and disseminate marketing and transactional emails.<br /><br /></p>
       <p>&emsp;&emsp;Entry Java Developer (Contract)</p>
       <p>&emsp;&emsp;&emsp;Specialized in creating automated email solutions using Java for the Email Design team.</p>
       <p>&emsp;&emsp;&emsp;Engaged in code reviews and quality assurance processes, ensuring reliability and performance of Java-based email solutions.<br /><br /></p>
