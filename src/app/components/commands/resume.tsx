@@ -15,7 +15,7 @@ const Resume: React.FC = () => {
       <p>&emsp;MADISON MUTUAL INSURANCE COMPANY</p>
       <p>&emsp;&emsp;Location: Edwardsville, IL<br /><br /></p>
       <p>&emsp;&emsp;IT Developer (2025 - Present)</p>
-      <p>&emsp;&emsp;&emsp;Designed, developed, and maintained new features, bug fixes, and enhancements within the Guidewire InsuranceNow platform, improving stability and functionality for insurance workflows.</p>
+      <p>&emsp;&emsp;&emsp;Designed, developed, and maintained new features, bug fixes, and enhancements within the Guidewire InsuranceNow platform, improving stability and &emsp;&emsp;&emsp;functionality for insurance workflows.</p>
       <p>&emsp;&emsp;&emsp;Deployed application changes to QA environments, ensuring smooth integration and readiness for testing cycles.</p>
       <p>&emsp;&emsp;&emsp;Created code analysis reports to identify performance bottlenecks, optimize existing modules, and ensure compliance with system standards.<br /><br /></p>
       <p>&emsp;DISH NETWORK</p>
