@@ -5,7 +5,7 @@ const Banner: React.FC = () => {
       <>
         <div>
           <div>
-            <p style={{color:'#0077aa'}}>Elena Coleman Only A Developer. Not A Corporation.</p>
+            <p style={{color:'#0077aa'}}>Elena Winters Only A Developer. Not A Corporation.</p>
             <div>
             <span className="ascii-art">{`                                                  ⠀⠀⠀⠀⠀⢀⡀⣄⢀⡄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣴⡶⠶⠶⠖⠒⠒⠒⠲⠶⠶⢶⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀
                                                   ⠀⠀⠀⠀⠰⣮⡿⠛⠻⠷⣯⣶⣀⡀⠀⠀⠀⠀⣀⣴⠾⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠶⣤⡀⠀⠀⠀⠀⠀⣀⣤⣾⣼⣿⣷⣿⣠⠀⠀⠀⠀

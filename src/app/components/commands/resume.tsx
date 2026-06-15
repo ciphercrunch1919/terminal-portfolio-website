@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const Resume: React.FC = () => {
-  const file = "/ELENA_COLEMAN_Resume2025-1.pdf" //Resume pdf file
+  const file = "/ELENA_WINTERS_Resume_2026.pdf" //Resume pdf file
 
   return (
     <>

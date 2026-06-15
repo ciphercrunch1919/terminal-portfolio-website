@@ -4,12 +4,23 @@ const About: React.FC = () => {
     return (
       <>
             <p>Hey, I'm Elena!👋</p>
-            <p className="text-wrap w-2/3">I am a driven and innovative Software Engineer based in Castle Rock, CO.
+            <p className="text-wrap w-2/3">I am a driven and innovative Software Developer based in Fairview Heights, IL.
             With a passion for crafting seamless communication solutions, I bring my expertise 
-            in software development and data analysis to the table. My journey at DISH Network 
-            has been marked by significant contributions to the Outbound Communication Services 
-            Email Design Team, where I actively design and implement transactional email solutions, 
-            ensuring seamless communication with our valued end-users across various product lines.</p>
+            in software development and data analysis to the table. I work for Madison Mutual Insurance Company 
+            and I am held as a valuable member of the IT Development team. For managerial responsibilities, I 
+            have helped onboard new employees and managed/assigned tasks from Breeze Projects. For all other 
+            responsibilities, I have designed, developed, and maintained new features, bug fixes, and enhancements 
+            within the Guidewire InsuranceNow platform, improving stability and functionality for insurance 
+            workflows. I have also deployed application changes to QA environments, ensuring smooth integration 
+            and readiness for testing cycles. Additionally, I have created code analysis reports to identify 
+            performance bottlenecks, optimize existing modules, and ensure compliance with system standards.
+            Additionally, I have collaborated and contributed to the development and maintenance of internal 
+            applications for IVANS Book Roll transfers and HC3 printing services.I am always seeking new 
+            opportunities to contribute my skills and knowledge to a dynamic team.</p>
+            <p className="text-wrap w-2/3">My role as a Software Engineer II at DISH Network 
+            was marked by significant contributions to the Outbound Communication Services 
+            Email Design Team, where I actively designed and implemented transactional email solutions, 
+            ensuring seamless communication with DISH's valued end-users across various product lines.</p>
             <p className="text-wrap w-2/3">My role as an Entry Java Developer at DISH Network allowed me to specialize in creating 
             automated email solutions using Java, ensuring the smooth delivery of messages to our 
             customers. Engaging in rigorous code reviews and quality assurance processes, I uphold 

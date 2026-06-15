@@ -4,7 +4,7 @@ const Help: React.FC = () => {
     return (
       <>
             <div>
-              <p><span className={'shadowText'}>about</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Who is Elena Coleman?</p>
+              <p><span className={'shadowText'}>about</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Who is Elena Winters?</p>
               <p><span className={'shadowText'}>education</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - View education background</p>
               <p><span className={'shadowText'}>resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - View latest terminal resume and link to download pdf of updated resume</p>
               <p><span className={'shadowText'}>projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - View coding projects</p>

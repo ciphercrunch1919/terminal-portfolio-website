@@ -12,6 +12,8 @@ const Projects: React.FC = () => {
               <p>&emsp;&emsp;A variation of the Rock Paper Scissors game implemented in Java.</p>
               <p><a href="https://github.com/ciphercrunch1919/SuguruSolverAI" target="_blank">SuguruSolverAI</a> - Python</p>
               <p>&emsp;&emsp;A Python project utilizing AI heuristics to solve Suguru puzzles.</p>
+              <p><a href="https://github.com/ciphercrunch1919/AUTH-API-Project" target="_blank">AUTH API Project</a> - RUST</p>
+              <p>&emsp;&emsp;A RUST project for implementing an authentication API.</p>
               <p className={'shadowText'}>** click on name of project to view github **</p>
             </div>
       </>
